@@ -1,0 +1,44 @@
+.welcome-message {
+    text-align: center; 
+    font-size: 2.5rem;  
+    font-weight: 600;  
+    color: red;       
+    margin-top: 40px;  
+    margin-bottom: 30px; 
+}
+
+.container {
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+.add-task-btn {
+    display: inline-block; 
+    padding: 15px 30px; 
+    font-size: 1.2rem; 
+    font-weight: 500; 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    text-align: center; 
+    text-decoration: none; 
+    transition: background-color 0.3s ease; 
+}
+
+.add-task-btn:hover {
+    background-color: #0056b3; 
+    cursor: pointer; 
+}
+
+@media (max-width: 768px) {
+    .welcome-message {
+        font-size: 2rem;
+    }
+
+    .add-task-btn {
+        width: 100%; 
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,20 @@
+/* Add to your styles.css or component-specific CSS */
+.table th, .table td {
+    text-align: center;
+}
+
+.task-list th {
+    background-color: #f8f9fa;
+}
+
+.task-list td button {
+    margin: 5px;
+}
+
+.task-list {
+    margin-top: 20px;
+}
+
+.btn-warning:hover, .btn-danger:hover, .btn-success:hover {
+    opacity: 0.8;
+}

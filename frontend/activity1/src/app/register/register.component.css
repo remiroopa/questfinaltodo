@@ -1,0 +1,32 @@
+/* Form container shadow */
+.container.shadow {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+h1.text-center {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+/* Input focus color */
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Radio buttons styling */
+input[type="radio"] {
+    margin-right: 10px;
+}

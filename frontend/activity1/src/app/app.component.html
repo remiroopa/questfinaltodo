@@ -1,0 +1,19 @@
+<div class="container text-center">
+  <h1 class="welcome-message text-primary">{{ 'WELCOME' | translate }}</h1>
+  <p class="lead">Date: {{ formattedDate }}</p>
+
+  <div class="language-buttons mb-4">
+    <button (click)="changeLanguage('en')" class="btn btn-warning m-2">English</button>
+    <button (click)="changeLanguage('ml')" class="btn btn-warning m-2">Malayalam</button>
+    <button (click)="changeLanguage('fr')" class="btn btn-warning m-2">French</button>
+    <button (click)="changeLanguage('hi')" class="btn btn-warning m-2">Hindi</button>
+  </div>
+
+  <div class="mb-5">
+    <a routerLink="reg" class="btn btn-primary m-2">Register</a>
+    <a routerLink="log" class="btn btn-primary m-2">Login</a>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+

@@ -1,0 +1,83 @@
+<!-- Task Form -->
+<div class="container mt-4 shadow">
+    <form (ngSubmit)="currentTaskId ? updateTask() : addTask()">
+      <h2 class="text-center text-danger">{{ currentTaskId ? 'Edit Task' : 'Add New Task' }}</h2>
+  
+      <div class="form-group">
+        <label for="task_name">Task Name:</label>
+        <input id="task_name" [(ngModel)]="task_name" name="task_name" class="form-control" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="task_description">Description:</label>
+        <textarea id="task_description" [(ngModel)]="task_description" name="task_description" class="form-control"></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="status">Status:</label>
+        <select id="status" [(ngModel)]="status" name="status" class="form-control">
+          <option value="0">Incomplete</option>
+          <option value="1">Complete</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="due_date">Due Date:</label>
+        <input id="due_date" [(ngModel)]="due_date" name="due_date" type="date" class="form-control" />
+      </div>
+  
+      <div class="form-group">
+        <label for="reminder_time">Reminder Time:</label>
+        <input id="reminder_time" [(ngModel)]="reminder_time" name="reminder_time" type="datetime-local" class="form-control" />
+      </div>
+  
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary w-50 m-5">
+          {{ currentTaskId ? 'Update Task' : 'Add Task' }}
+        </button>
+      </div>
+      
+      
+          </form>
+
+  <div class="d-flex mt-3 justify-content-center">
+    <button (click)="showAllTasks()" class="btn btn-info m-4">Show All Tasks</button>
+    <button (click)="showCompletedTasks()" class="btn btn-success m-4 ">Show Completed</button>
+    <button (click)="showIncompleteTasks()" class="btn btn-secondary m-4">Show Incomplete</button>
+  </div>
+  
+  <!-- Task Table -->
+    <h2 class="text-center text-danger">Your Tasks</h2>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Task Name</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Due Date</th>
+          <th>Reminder Time</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks">
+          <td>{{ task.task_name }}</td>
+          <td>{{ task.task_description }}</td>
+          <td>{{ task.status === 1 ? 'Completed' : 'Incomplete' }}</td>
+          <td>{{ task.due_date | date }}</td>
+          <td>{{ task.reminder_time | date }}</td>
+          <td>
+            <button (click)="setUpdate(task)" class="btn btn-warning btn-sm">Edit</button>
+          </td>
+          <td>
+            <button (click)="deleteTask(task.id)" class="btn btn-danger btn-sm">Delete</button>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Buttons to filter tasks -->
+    
+  </div>
+  

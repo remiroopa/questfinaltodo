@@ -1,0 +1,8 @@
+<div class="container text-center my-5">
+    <h1 class="welcome-message display-4 fw-bold">
+        WELCOME, {{ data.first_name | uppercase }} {{ data.last_name | uppercase }}
+    </h1>
+    <div class="mt-4">
+        <a [routerLink]="['/task', data.id]" class="btn btn-primary btn-lg add-task-btn">Add Task</a>
+    </div>
+</div>
